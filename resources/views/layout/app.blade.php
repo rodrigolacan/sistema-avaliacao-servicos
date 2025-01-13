@@ -13,6 +13,7 @@
 
     <div class="flex-1 p-6">
         @yield('avaliacao-body')
+        @yield('pesquisarRequisicao-body')
     </div>
 </body>
 
