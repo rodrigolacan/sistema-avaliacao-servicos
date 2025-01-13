@@ -38,22 +38,22 @@
                             <tr>
                                 <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
                                     <div>
-                                        <h2 class="font-medium text-gray-800 dark:text-white ">Catalog</h2>
+                                        <h2 class="font-medium text-gray-800 dark:text-white ">{{ $requisicao['numano'] }}</h2>
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                        Aprovada
+                                        {{ $requisicao['situacao'] }}
                                     </div>
                                 </td>
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
                                     <div>
-                                        <h4 class="text-gray-700 dark:text-gray-200">Content curating app</h4>
+                                        <h4 class="text-gray-700 dark:text-gray-200">{{ $requisicao['dtEntrega'] }}</h4>
                                     </div>
                                 </td>
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
                                     <div>
-                                         <h4 class="text-gray-700 dark:text-gray-200">Número de tipo</h4>
+                                         <h4 class="text-gray-700 dark:text-gray-200">{{ $requisicao['numano_tipo'] }}</h4>
                                     </div>
                                 </td>
 
