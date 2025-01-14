@@ -2,7 +2,7 @@
     <div class="flex flex-col mt-6">
         <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
+                <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg" x-data="{ isOpen: false, count: 0 }">
 
                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                         <thead class="bg-gray-50 dark:bg-gray-800">
@@ -62,13 +62,21 @@
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
                                     <button 
-                                        class="px-4 py-2 text-white transition-colors duration-200 rounded-lg bg-emerald-500 hover:bg-emerald-400 focus:outline-none dark:bg-emerald-600 dark:hover:bg-emerald-500">
-                                        Avaliar Requisição
+                                        @click="isOpen = !isOpen"
+                                        :class="{
+                                            'bg-emerald-500 hover:bg-emerald-400': !isOpen,
+                                            'bg-red-500 hover:bg-red-400': isOpen
+                                        }"                                        
+                                        class="px-4 py-2 text-white transition-colors duration-200 rounded-lg focus:outline-none">
+                                        <span x-text="isOpen ? 'Fechar Avaliação' : 'Avaliar Requisição'"></span>
                                     </button>
                                 </td>                                                             
                             </tr>
                         </tbody>
                     </table>
+                    <div x-show="isOpen" x-transition class="mt-4 flex justify-center">
+                        <p>Texto de avaliação que você deseja mostrar aqui.</p>
+                    </div>
                 </div>
             </div>
         </div>
