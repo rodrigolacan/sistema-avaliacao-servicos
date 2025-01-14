@@ -87,6 +87,6 @@
     x-transition:leave-start="max-h-screen" 
     x-transition:leave-end="max-h-0"
     class="mt-4 flex justify-center overflow-hidden">
-        <x-requisicao.forms-avaliacao-requisicao />
+        <x-requisicao.forms-avaliacao-requisicao  :requisicao="$requisicao"/>
     </div>
 </section>

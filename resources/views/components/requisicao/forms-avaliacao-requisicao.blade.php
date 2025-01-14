@@ -2,6 +2,14 @@
     <h2 class="text-3xl font-semibold text-center text-gray-80 mb-8">Avaliação do Evento</h2>
     
     <form action="{{ route('enviar.avaliacao') }}" method="POST">
+        @csrf
+
+        <!-- Dados da requisição -->
+        <input type="hidden" name="requisicao[numano]" value="{{ $requisicao['numano'] }}">
+        <input type="hidden" name="requisicao[situacao]" value="{{ $requisicao['situacao'] }}">
+        <input type="hidden" name="requisicao[data-entrega]" value="{{ $requisicao['dtEntrega'] }}">
+        <input type="hidden" name="requisicao[numano-tipo]" value="{{ $requisicao['numano_tipo'] }}">
+
         <!-- Pergunta 1 -->
         <div class="mb-6">
             <label for="eventoDia" class="block text-lg font-medium text-gray-700 mb-2">1. Qual o dia do evento?</label>
