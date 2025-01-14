@@ -1,8 +1,8 @@
-<section class="container px-4 mx-auto">
+<section class="container px-4 mx-auto" x-data="{ isOpen: false, count: 0 }">
     <div class="flex flex-col mt-6">
         <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg" x-data="{ isOpen: false, count: 0 }">
+                <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
 
                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                         <thead class="bg-gray-50 dark:bg-gray-800">
@@ -74,11 +74,19 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div x-show="isOpen" x-transition class="mt-4 flex justify-center">
-                        <p>Texto de avaliação que você deseja mostrar aqui.</p>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div 
+    x-show="isOpen" 
+    x-transition:enter="transition-all duration-500 ease-in-out" 
+    x-transition:enter-start="max-h-0" 
+    x-transition:enter-end="max-h-screen" 
+    x-transition:leave="transition-all duration-500 ease-in-out"
+    x-transition:leave-start="max-h-screen" 
+    x-transition:leave-end="max-h-0"
+    class="mt-4 flex justify-center overflow-hidden">
+        <x-requisicao.forms-avaliacao-requisicao />
     </div>
 </section>
