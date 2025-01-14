@@ -42,10 +42,13 @@
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
-                                    <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+                                    <div 
+                                        class="inline px-3 py-1 text-sm font-normal rounded-full gap-x-2 
+                                        {{ $requisicao['situacao'] === 'APROVADA' ? 'text-emerald-500 bg-emerald-100/60' : 'text-red-500 bg-red-100/60' }} 
+                                        dark:bg-gray-800">
                                         {{ $requisicao['situacao'] }}
                                     </div>
-                                </td>
+                                </td>                                
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
                                     <div>
                                         <h4 class="text-gray-700 dark:text-gray-200">{{ $requisicao['dtEntrega'] }}</h4>
