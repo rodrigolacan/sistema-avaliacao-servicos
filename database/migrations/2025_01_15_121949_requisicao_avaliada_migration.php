@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('requisicoes', function (Blueprint $table) {
             $table->id();
-            $table->string('numano');
+            $table->string('numano')->unique();
             $table->string('situacao');
             $table->date('data_entrega');
             $table->string('numano_tipo');
