@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('rate_cordialidade');
             $table->integer('rate_geral');
             $table->text('elogios_sugestoes')->nullable();
-            $table->string('usuario_id'); // Dado vindo do Keycloak, não é FK
-            $table->string('nome_usuario');
+            $table->string('usuario_id')->nullable();
+            $table->string('nome_usuario')->nullable();
             $table->timestamps();
         
             $table->foreign('requisicao_id')->references('id')->on('requisicoes')->onDelete('cascade');
