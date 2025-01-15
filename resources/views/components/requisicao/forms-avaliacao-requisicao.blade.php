@@ -124,14 +124,14 @@
 
         <!-- Pergunta 5 - Opção "Elogios" para texto -->
         <div class="mb-6">
-            <label for="elogiosSugestoes" class="block text-lg font-medium text-gray-700 mb-2">5. Descreva elogios</label>
-            <textarea id="elogiosSugestoes" name="elogiosSugestoes" rows="4" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            <label for="elogios" class="block text-lg font-medium text-gray-700 mb-2">5. Descreva elogios</label>
+            <textarea id="elogios" name="elogios" rows="4" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
         </div>
 
         <!-- Pergunta 6 - Opção "Melhorias" para texto -->
         <div class="mb-6">
-            <label for="elogiosSugestoes" class="block text-lg font-medium text-gray-700 mb-2">6. Aponte melhorias</label>
-            <textarea id="elogiosSugestoes" name="elogiosSugestoes" rows="4" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            <label for="melhorias" class="block text-lg font-medium text-gray-700 mb-2">6. Aponte melhorias</label>
+            <textarea id="melhorias" name="melhorias" rows="4" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
         </div>
 
         <div class="flex justify-center">
