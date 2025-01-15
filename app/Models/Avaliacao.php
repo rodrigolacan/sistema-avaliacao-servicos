@@ -11,10 +11,8 @@ class Avaliacao extends Model
 {
     use HasFactory;
 
-    // Defina o nome da tabela, caso não siga a convenção de nomes do Laravel
     protected $table = 'avaliacoes';
 
-    // Defina os campos que podem ser preenchidos em massa (mass assignable)
     protected $fillable = [
         'requisicao_id',
         'evento_dia',
@@ -27,7 +25,6 @@ class Avaliacao extends Model
         'nome_usuario',
     ];
 
-    // Defina as relações do modelo
     public function requisicao()
     {
         return $this->belongsTo(Requisicao::class, 'requisicao_id');
