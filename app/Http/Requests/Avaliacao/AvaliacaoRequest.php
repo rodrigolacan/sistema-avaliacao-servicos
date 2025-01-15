@@ -22,12 +22,12 @@ class AvaliacaoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'eventoDia' => 'required|date',
             'rate-evento' => 'required|integer|min:1|max:5',
             'rate-servico' => 'required|integer|min:1|max:5',
             'rate-cordialidade' => 'required|integer|min:1|max:5',
             'rate-geral' => 'required|integer|min:1|max:5',
-            'elogiosSugestoes' => 'required'
+            'elogios' => 'required',
+            'melhorias' => 'required'
         ];
     }
 
@@ -38,10 +38,7 @@ class AvaliacaoRequest extends FormRequest
      */
     public function messages()
     {
-        return [
-            'eventoDia.required' => 'O campo "Qual o dia do evento?" é obrigatório.',
-            'eventoDia.date' => 'O campo "Qual o dia do evento?" deve ser uma data válida.',
-            
+        return [            
             'rate-evento.required' => 'O campo "Satisfação geral" é obrigatório.',
             'rate-evento.integer' => 'O campo "Satisfação geral" deve ser um valor entre 1 e 5.',
             'rate-evento.min' => 'O campo "Satisfação geral" deve ser no mínimo 1.',
@@ -62,7 +59,10 @@ class AvaliacaoRequest extends FormRequest
             'rate-geral.min' => 'O campo "Avaliação geral" deve ser no mínimo 1.',
             'rate-geral.max' => 'O campo "Avaliação geral" deve ser no máximo 5.',
 
-            'elogiosSugestoes.required' => 'O campo "Descreve elogios ou sugestões" é obrigatório'
+            'elogios.required' => 'O campo "Descreva elogios" é obrigatório',
+
+            'melhorias.required' => 'O campo "Aponte melhorias" é obrigatório'
+
         ];
     }
 }
