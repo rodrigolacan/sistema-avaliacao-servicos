@@ -9,16 +9,10 @@
         <input type="hidden" name="requisicao[situacao]" value="{{ $requisicao['situacao'] }}">
         <input type="hidden" name="requisicao[data-entrega]" value="{{ $requisicao['dtEntrega'] }}">
         <input type="hidden" name="requisicao[numano-tipo]" value="{{ $requisicao['numano_tipo'] }}">
-
-        <!-- Pergunta 1 -->
-        <div class="mb-6">
-            <label for="eventoDia" class="block text-lg font-medium text-gray-700 mb-2">1. Qual o dia do evento?</label>
-            <input type="date" id="eventoDia" name="eventoDia" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        </div>
         
-        <!-- Pergunta 2 - Sistema de Estrelas de 1 a 5 -->
+        <!-- Pergunta 1 - Sistema de Estrelas de 1 a 5 -->
         <div class="mb-6">
-            <label for="satisfacao" class="block text-lg font-medium text-gray-700 mb-2">2. Como você avalia sua satisfação geral com o evento?</label>
+            <label for="satisfacao" class="block text-lg font-medium text-gray-700 mb-2">1. Como você avalia sua satisfação geral com o evento?</label>
             <fieldset class="space-y-4">
                 <div class="relative flex flex-row-reverse space-x-1 justify-center">
                     <!-- Estrela 5 -->
@@ -44,9 +38,9 @@
             </fieldset>            
         </div>
 
-        <!-- Pergunta 3 -->
+        <!-- Pergunta 2 -->
         <div class="mb-6">
-            <label for="pontualidade" class="block text-lg font-medium text-gray-700 mb-2">3. Como você avalia a pontualidade da entrega dos serviços contratados?</label>
+            <label for="pontualidade" class="block text-lg font-medium text-gray-700 mb-2">2. Como você avalia a pontualidade da entrega dos serviços contratados?</label>
             <fieldset class="space-y-4">
                 <div class="relative flex flex-row-reverse space-x-1 justify-center">
                     <!-- Estrela 5 -->
@@ -72,9 +66,9 @@
             </fieldset>
         </div>
 
-        <!-- Pergunta 4 -->
+        <!-- Pergunta 3 -->
         <div class="mb-6">
-            <label for="cordialidade" class="block text-lg font-medium text-gray-700 mb-2">4. Cordialidade e atendimento dos profissionais envolvidos no evento</label>
+            <label for="cordialidade" class="block text-lg font-medium text-gray-700 mb-2">3. Cordialidade e atendimento dos profissionais envolvidos no evento</label>
             <fieldset class="space-y-4">
                 <div class="relative flex flex-row-reverse space-x-1 justify-center">
                     <!-- Estrela 5 -->
@@ -100,9 +94,9 @@
             </fieldset>
         </div>
 
-        <!-- Pergunta 5 -->
+        <!-- Pergunta 4 -->
         <div class="mb-6">
-            <label for="avaliacaoGeral" class="block text-lg font-medium text-gray-700 mb-2">5. No contexto geral, como você avalia os serviços prestados?</label>
+            <label for="avaliacaoGeral" class="block text-lg font-medium text-gray-700 mb-2">4. No contexto geral, como você avalia os serviços prestados?</label>
             <fieldset class="space-y-4">
                 <div class="relative flex flex-row-reverse space-x-1 justify-center">
                     <!-- Estrela 5 -->
@@ -128,9 +122,15 @@
             </fieldset>
         </div>
 
-        <!-- Pergunta 6 - Opção "Outro" para texto -->
+        <!-- Pergunta 5 - Opção "Elogios" para texto -->
         <div class="mb-6">
-            <label for="elogiosSugestoes" class="block text-lg font-medium text-gray-700 mb-2">6. Descreva elogios ou sugestões</label>
+            <label for="elogiosSugestoes" class="block text-lg font-medium text-gray-700 mb-2">5. Descreva elogios</label>
+            <textarea id="elogiosSugestoes" name="elogiosSugestoes" rows="4" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+
+        <!-- Pergunta 6 - Opção "Melhorias" para texto -->
+        <div class="mb-6">
+            <label for="elogiosSugestoes" class="block text-lg font-medium text-gray-700 mb-2">6. Aponte melhorias</label>
             <textarea id="elogiosSugestoes" name="elogiosSugestoes" rows="4" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
         </div>
 
