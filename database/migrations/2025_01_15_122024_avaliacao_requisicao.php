@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('avaliacoes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('requisicao_id'); // FK para a requisição
-            $table->date('evento_dia');
             $table->integer('rate_evento');
             $table->integer('rate_servico');
             $table->integer('rate_cordialidade');
             $table->integer('rate_geral');
-            $table->text('elogios_sugestoes')->nullable();
+            $table->text('elogios');
+            $table->text('melhorias');
             $table->string('usuario_id')->nullable();
             $table->string('nome_usuario')->nullable();
             $table->timestamps();
