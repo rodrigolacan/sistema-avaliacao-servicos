@@ -96,8 +96,7 @@
                     <p class="text-sm font-medium text-gray-600 dark:text-gray-300"><strong>Requisição ID:</strong> <span x-text="selectedAvaliacao.requisicao_id"></span></p>
                 </div>
                 <div class="space-y-2">
-                    <p class="text-sm font-medium text-gray-600 dark:text-gray-300"><strong>Criado em:</strong> <span x-text="selectedAvaliacao.created_at"></span></p>
-                    <p class="text-sm font-medium text-gray-600 dark:text-gray-300"><strong>Atualizado em:</strong> <span x-text="selectedAvaliacao.updated_at"></span></p>
+                    <p class="text-sm font-medium text-gray-600 dark:text-gray-300"><strong>Avaliado em:</strong> <span x-text="new Date(selectedAvaliacao.created_at).toLocaleDateString('pt-br')"></span></p>
                 </div>
             </div>
         </div>
@@ -108,7 +107,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="space-y-2">
                     <p class="text-sm font-medium text-gray-600 dark:text-gray-300">
-                        Rate Evento:
+                        <strong>Rate Evento:</strong>
                         <span class="inline-flex">
                             <!-- Renderizando estrelas -->
                             <template x-for="i in 5" :key="i">
