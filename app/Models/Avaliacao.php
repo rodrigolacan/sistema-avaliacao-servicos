@@ -20,7 +20,8 @@ class Avaliacao extends Model
         'rate_servico',
         'rate_cordialidade',
         'rate_geral',
-        'elogios_sugestoes',
+        'elogios',
+        'melhorias',
         'usuario_id',
         'nome_usuario',
     ];
