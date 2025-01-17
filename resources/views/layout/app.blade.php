@@ -15,6 +15,7 @@
     <div class="flex-1 p-6 overflow-y-auto bg-gray-800">
         @yield('avaliacao-body')
         @yield('pesquisarRequisicao-body')
+        @yield('pesquisarAvaliacao-body')
     </div>
 </body>
 
