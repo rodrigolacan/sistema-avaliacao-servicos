@@ -15,6 +15,7 @@
                 </div>
             </div>
             </a>
+            <a href="{{ route('pesquisar.avaliacao') }}">
             <div class="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
                 style="background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')">
                 <div
@@ -23,6 +24,7 @@
                     <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">Consultar Requisições que já foram avaliadas</p>
                 </div>
             </div>
+            </a>
         </div>
     </div>
 </section>
