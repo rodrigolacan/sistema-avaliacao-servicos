@@ -56,7 +56,7 @@
             </button>
         </div>
     </div>
-@endif
+    @endif
 
     @if (!empty($requisicao))
         <x-requisicao.table-requisicao :requisicao="$requisicao[0]" />
