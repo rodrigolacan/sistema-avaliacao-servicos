@@ -43,6 +43,9 @@
 
     @if (!empty($avaliacoes))
         <x-avaliacao.table-avaliacao :avaliacoes="$avaliacoes" />
+        <div>
+            {{ $avaliacoes->links() }}
+        </div>
     @endif
     <script>
         // Função para fechar a caixa de erro

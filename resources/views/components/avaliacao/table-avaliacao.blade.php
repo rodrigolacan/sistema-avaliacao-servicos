@@ -212,10 +212,17 @@
         <div class="mb-6">
             <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">Feedbacks</h3>
             <div class="space-y-2">
-                <p class="text-sm font-medium text-gray-600 dark:text-gray-300"><strong>Elogios:</strong> <span x-text="selectedAvaliacao.elogios"></span></p>
-                <p class="text-sm font-medium text-gray-600 dark:text-gray-300"><strong>Melhorias:</strong> <span x-text="selectedAvaliacao.melhorias"></span></p>
+                <p class="text-sm font-medium text-gray-600 dark:text-gray-300">
+                    <strong>Elogios:</strong> 
+                    <span x-text="selectedAvaliacao.elogios" class="max-w-xs break-words"></span>
+                </p>
+                <p class="text-sm font-medium text-gray-600 dark:text-gray-300">
+                    <strong>Melhorias:</strong> 
+                    <span x-text="selectedAvaliacao.melhorias" class="max-w-xs break-words"></span>
+                </p>
             </div>
         </div>
+        
 
         <!-- Dados do Usuário -->
         <div class="mb-6">
