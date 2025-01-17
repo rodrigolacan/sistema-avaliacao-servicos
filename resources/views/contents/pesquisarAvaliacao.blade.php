@@ -41,8 +41,8 @@
         </div>
     @endif
 
-    @if (!empty($requisicao))
-        <x-requisicao.table-requisicao :requisicao="$requisicao[0]" />
+    @if (!empty($avaliacoes))
+        <x-avaliacao.table-avaliacao :avaliacoes="$avaliacoes" />
     @endif
     <script>
         // Função para fechar a caixa de erro
