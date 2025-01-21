@@ -38,9 +38,7 @@ class HttpClientFactory
 
         // Aplica qualquer configuração adicional fornecida
         if (!empty($config)) {
-            foreach ($config as $key => $value) {
-                $http = $http->$key($value);
-            }
+            $http = $http->withOptions($config);
         }
 
         return $http;
