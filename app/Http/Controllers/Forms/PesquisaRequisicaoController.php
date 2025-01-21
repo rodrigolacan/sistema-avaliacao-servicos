@@ -30,7 +30,6 @@ class PesquisaRequisicaoController extends Controller
             $response = $this->http->get('https://api.rr.sebrae.com.br/api/database/intranet2013/vSOLRequisicoes?campo=numano&condicao=' . $numano);
 
             $data = $response->json();
-            dd($this->http);
             if (!isset($data['data']) || empty($data['data'])) {
                 return redirect()
                     ->route('pesquisar.requisicao')
