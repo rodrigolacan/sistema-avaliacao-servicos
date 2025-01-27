@@ -12,22 +12,37 @@ class PesquisaRequisicaoController extends Controller
 {
     protected $http;
 
-    public function __construct(){
-        $this->http = HttpClientFactory::create(['verify'=>false], getenv('TOKEN_API_SEBRAE'));
+    public function __construct()
+    {
+        $this->http = HttpClientFactory::create(['verify' => false], getenv('TOKEN_API_SEBRAE'));
     }
 
     public function retornarRequisicao(Request $request)
     {
         $numano = $request->requisicao;
+        $requisicaoId = $request->requisicaoid;
 
         try {
-            if (empty($numano)) {
+            // Verifica se nenhum parâmetro foi fornecido
+            if (empty($numano) && empty($requisicaoId)) {
                 return redirect()
-                        ->route('pesquisar.requisicao')
-                        ->with('error', 'O campo "Requisição" é obrigatório.');
+                    ->route('pesquisar.requisicao')
+                    ->with('error', 'O campo "Requisição" ou "ID" é obrigatório.');
             }
 
-            $response = $this->http->get('https://api.rr.sebrae.com.br/api/database/intranet2013/vSOLRequisicoes?campo=numano&condicao=' . $numano);
+            // Monta a URL com base no parâmetro fornecido
+            $url = 'https://api.rr.sebrae.com.br/api/database/intranet2013/vSOLRequisicoes?';
+
+            if (!empty($numano)) {
+                $url .= 'campo=numano&condicao=' . $numano;
+            }
+
+            if (!empty($requisicaoId)) {
+                // Se requisicaoid foi fornecido, usa ele na consulta
+                $url .= (strpos($url, '?') !== false ? '&' : '') . 'campo=IDRequisicao&condicao=' . $requisicaoId;
+            }
+
+            $response = $this->http->get($url);
 
             $data = $response->json();
             if (!isset($data['data']) || empty($data['data'])) {
