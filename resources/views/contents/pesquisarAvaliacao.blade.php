@@ -2,6 +2,22 @@
 
 @section('pesquisarAvaliacao-body')
     <x-util.search-bar method="GET" action="/search/avaliacao" />
+     <!-- Botão de Exportação -->
+     <div class="flex justify-end mb-4">
+        <a href="{{ route('export.avaliacoes', ['format' => 'pdf']) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Exportar para PDF
+        </a>
+
+        <a href="{{ route('export.avaliacoes', ['format' => 'excel']) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Exportar para Excel
+        </a>
+    </div>
 
 
     @if ($errors->any())
