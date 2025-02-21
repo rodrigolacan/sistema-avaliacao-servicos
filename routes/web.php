@@ -14,3 +14,4 @@ Route::get('/search/avaliacao', [PesquisarAvalicaoController::class, 'retornarAv
 Route::post('/forms/avaliacao', [EnviarPesquisaAvaliacaoController::class, 'enviarPesquisa'])->name('enviar.avaliacao');
 
 Route::get('/pesquisar/avaliacoes',[PesquisarAvalicaoController::class, 'pesquisarAvaliacao'])->name('pesquisar.avaliacao');
+Route::get('/export/avaliacoes', [AvaliacaoRequisicaoController::class, 'export'])->name('export.avaliacoes');
