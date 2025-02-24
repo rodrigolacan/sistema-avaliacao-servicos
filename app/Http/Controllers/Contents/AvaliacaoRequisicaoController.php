@@ -18,7 +18,7 @@ class AvaliacaoRequisicaoController extends Controller
 
     public function export(Request $request)
     {
-        $avaliacoes = Avaliacao::all();
+        $avaliacoes = Avaliacao::with('requisicao')->get();
     
         $format = $request->input('format', 'excel'); // Padrão é Excel
     
