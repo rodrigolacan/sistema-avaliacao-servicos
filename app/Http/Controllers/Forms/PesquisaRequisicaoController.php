@@ -31,18 +31,22 @@ class PesquisaRequisicaoController extends Controller
             }
 
             // Monta a URL com base no parâmetro fornecido
-            $url = 'https://api.rr.sebrae.com.br/api/database/intranet2013/vSOLRequisicoes?';
+            $endpoint = 'database/intranet2013/vSOLRequisicoes?';
 
+            // Monta os parâmetros da requisição usando a própria Facade Http
+            $params = [];
             if (!empty($numano)) {
-                $url .= 'campo=numano&condicao=' . $numano;
+                $params['campo'] = 'numano';
+                $params['condicao'] = $numano;
             }
 
             if (!empty($requisicaoId)) {
-                // Se requisicaoid foi fornecido, usa ele na consulta
-                $url .= (strpos($url, '?') !== false ? '&' : '') . 'campo=IDRequisicao&condicao=' . $requisicaoId;
+                $params['campo'] = 'IDRequisicao';
+                $params['condicao'] = $requisicaoId;
             }
 
-            $response = $this->http->get($url);
+            // Faz a requisição à API usando a própria construção de parâmetros do Laravel
+            $response = $this->http->get($endpoint, $params);
 
             $data = $response->json();
             if (!isset($data['data']) || empty($data['data'])) {
